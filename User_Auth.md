@@ -6,7 +6,16 @@
 > This example shows the logical flow from the **frontend form** → **Django view layer** → **model** → **database**.
 
 ##
-## Models
+> ### models.py  
+> These models define the structure and logic behind **Servsly’s user authentication system**.  
+>  
+> The primary `User` model outlines the core attributes that distinguish staff from standard users,  
+> while supporting **email-based authentication** rather than traditional usernames.  
+>  
+> A companion `EmailVerification` model handles **one-time verification tokens**,  
+> which are securely generated and emailed to the user to confirm account ownership.  
+>  
+> This flow ensures that each account is both validated and protected before full access is granted.
 
 ```python
 from __future__ import annotations
@@ -113,7 +122,17 @@ class EmailVerification(models.Model):
 ```
 ##
 
-## Forms
+> ### forms.py  
+> The form layer manages **user input, validation, and submission handling** for Servsly’s authentication flow.  
+>  
+> The `SignUpForm` collects and validates user details such as email and name, enforcing uniqueness and proper formatting.  
+> It also includes a lightweight **honeypot field** to help deter automated bot submissions without relying on external CAPTCHA services.  
+>  
+> The `EmailAuthenticationForm` customizes Django’s default login form to support **email-based credentials** instead of usernames,  
+> while providing optional “remember me” functionality to control session duration.  
+>  
+> Together, these forms create a secure and user-friendly bridge between the frontend interface and Django’s backend logic.
+
 ```python
 # accounts/forms.py (showcase)
 
@@ -164,7 +183,21 @@ class EmailAuthenticationForm(HoneypotMixin, AuthenticationForm):
 ```
 ##
 
-## Views
+> ### views.py  
+> The views control the **core authentication logic and user flow** within Servsly’s Django backend.  
+>  
+> They manage key actions such as **account creation, login, logout, and email verification**,  
+> ensuring that only validated users gain access to protected areas of the application.  
+>  
+> `SignUpView` handles new user registration and triggers the generation of verification tokens,  
+> while `EmailLoginView` extends Django’s standard login behavior to support **email-based credentials**  
+> and optional “remember me” sessions.  
+>  
+> Supporting views such as `VerifyEmailView` and `CheckEmailView` guide users through  
+> the verification process, offering a seamless and secure onboarding experience.  
+>  
+> Together, these views connect the form layer to the database logic, completing the end-to-end authentication cycle.
+
 ```python
 from django.contrib import messages
 from django.contrib.auth import login as auth_login, logout as auth_logout
