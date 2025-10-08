@@ -279,7 +279,6 @@ class CheckEmailView(View):
         user = User.objects.filter(email__iexact=email).first() if email else None
         if user and not user.is_verified:
             token = EmailVerification.issue(user)
-            # TODO: resend verification email
         messages.success(request, "If an account needs verification, we’ve sent a new link.")
         return redirect("accounts:check_email")
 
