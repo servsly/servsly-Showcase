@@ -1,6 +1,6 @@
 # Servsly Showcase
 
-A documentation-style walkthrough of selected slices from **Servsly** (hosting platform) and **Serventry** (survey/lead intake).  
+A documentation-style walkthrough of selected slices from **Servsly** (hosting platform/survey/lead intake).  
 This repo intentionally shares **cleaned and simplified** snippets — not full production code — to demonstrate design, security posture, and development practices.
 
 > ⚠️ **Note:** The production applications are private. This showcase omits secrets, infrastructure details, and proprietary logic.  
