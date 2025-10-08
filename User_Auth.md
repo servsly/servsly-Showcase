@@ -1,4 +1,4 @@
-## Models.py
+## Models
 
 ```python
 from __future__ import annotations
@@ -156,7 +156,7 @@ class EmailAuthenticationForm(HoneypotMixin, AuthenticationForm):
 ```
 ##
 
-##Views
+## Views
 ```python
 from django.contrib import messages
 from django.contrib.auth import login as auth_login, logout as auth_logout
