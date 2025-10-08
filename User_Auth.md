@@ -1,3 +1,8 @@
+The snippets below demonstrate a simplified version of Servsly’s user authentication system.
+They have been cleaned and condensed for clarity and are not production-ready.
+This example shows the logical flow from the frontend form through the Django view layer to the model and database.
+
+##
 ## Models
 
 ```python
