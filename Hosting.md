@@ -1,3 +1,7 @@
+### What is servsly
+>Servsly Homebase acts as the control plane, packaging and validating sites before securely deploying them to Servsly Edge Nodes (our VPS delivery layer) via SSH.
+>Edge Nodes >serve content directly from disk, enforcing runtime directives like suspensions or maintenance triggers.
+
 ### Advanced: Hosting Lifecycle (Validate → Preview → Publish)
 
 This appendix outlines the high-level pipeline that processes uploaded site bundles:
