@@ -2,7 +2,10 @@
 >Servsly Homebase acts as the control plane, packaging and validating sites before securely deploying them to Servsly Edge Nodes (our VPS delivery layer) via SSH.
 >Edge Nodes >serve content directly from disk, enforcing runtime directives like suspensions or maintenance triggers.
 
-### The following outlines what is being built...
+### The following outlines the project...
+> This is not and will not be up to date with production code. 
+> This is simply showcase.
+
 
 ##
 > ### hosting/models.py  
