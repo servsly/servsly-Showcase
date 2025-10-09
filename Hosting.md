@@ -2,17 +2,9 @@
 >Servsly Homebase acts as the control plane, packaging and validating sites before securely deploying them to Servsly Edge Nodes (our VPS delivery layer) via SSH.
 >Edge Nodes >serve content directly from disk, enforcing runtime directives like suspensions or maintenance triggers.
 
-### Advanced: Hosting Lifecycle (Validate → Preview → Publish)
+### The following outlines what is being built...
 
-This appendix outlines the high-level pipeline that processes uploaded site bundles:
-1) **Validate** an archive and record stats  
-2) **Promote Preview** with a short-lived token/expiry  
-3) **Publish** a validated revision atomically and idempotently
-
-The showcase uses DB-centric stubs to illustrate flow without exposing filesystem
-paths, IP addresses, or production markers.
 ##
-
 > ### hosting/models.py  
 > These models define the **core data structure** behind Servsly’s site-hosting platform.  
 >  
