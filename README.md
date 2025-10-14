@@ -3,8 +3,8 @@
 A documentation-style walkthrough of selected slices from **Servsly** (hosting platform/survey/lead intake).  
 This repo intentionally shares **cleaned and simplified** snippets — not full production code — to demonstrate design, security posture, and development practices.
 
-> ⚠️ **Note:** The production applications are private. This showcase omits secrets, infrastructure details, and proprietary logic.  
-> Code snippets are trimmed for clarity and are **not** drop-in complete.
+> ⚠️ **Note 1:** The production applications are private. This showcase omits secrets, infrastructure details, and proprietary logic.  
+> Code snippets are trimmed for clarity and are **not** drop-in complete. These snippets and flows may be out of date with current builds and this showcase will be updated. Eventually. 
 
 ---
 
